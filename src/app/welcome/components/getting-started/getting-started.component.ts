@@ -1,5 +1,7 @@
 import { NgxElectronService } from './../../../ngx-electron/ngx-electron.service';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'seed-getting-started',
@@ -8,18 +10,20 @@ import { Component } from '@angular/core';
 })
 export class GettingStartedComponent {
 
-    constructor(private electron: NgxElectronService) {}
+    constructor(
+        private electron: NgxElectronService,
+        private router: Router) {
 
-    viewAngular(): void {
-        this.electron.shell.openExternal('https://angular.io/docs/ts/latest/');
     }
 
-    viewElectron(): void {
-        this.electron.shell.openExternal('https://electron.atom.io/docs/');
-    }
-
-    viewRepository(): void {
-        this.electron.shell.openExternal('https://github.com/sean-perkins/angular-electron-seed');
+    welcome(): void {
+        this.electron.send('ping');
+        this.electron.listener$.subscribe(message => {
+            if (message === 'pong') {
+                this.electron.shell.beep();
+                this.router.navigate(['/getting-started']);
+            }
+        });
     }
 
 }
