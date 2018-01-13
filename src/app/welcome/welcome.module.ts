@@ -7,14 +7,17 @@ import { GettingStartedComponent } from './components/getting-started/getting-st
 import { CardComponent } from './components/card/card.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MyMaterialModule } from '../app-material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
+    FlexLayoutModule,
     ReactiveFormsModule,
-    MyMaterialModule,
     WelcomeRoutingModule,
+    MyMaterialModule,
   ],
   declarations: [
     WelcomeScreenComponent,

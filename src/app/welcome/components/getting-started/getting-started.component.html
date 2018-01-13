@@ -1,29 +1,76 @@
-<div class="vertical-center">
+<div class="getting-started " style="padding:15px;">
 
-    <h1>Hello</h1>
+    <!-- <h1>Hello</h1> -->
 
-    <button mat-button mat-raised-button (click)="welcome()">Click me!</button>
+    <!-- <button mat-button mat-raised-button (click)="welcome()">Click me!</button> -->
 
 
-    <form class="example-form">
-        <mat-form-field class="example-full-width">
-            <input matInput placeholder="Favorite food" value="Sushi">
-        </mat-form-field>
+    <div fxLayout='row' fxLayoutAlign="space-between start" fxLayoutGap="15px" class="zero">
 
-        <mat-form-field class="example-full-width">
-            <textarea matInput placeholder="Leave a comment"></textarea>
-        </mat-form-field>
-    </form>
+        <div fxLayout='column' fxLayoutGap="15px" fxFlex="30">
+            <mat-card>
+                <mat-card-header>
+                    <img matCardAvatar src="https://randomuser.me/api/portraits/lego/6.jpg">
+                    <mat-card-title>Title</mat-card-title>
+                    <mat-card-subtitle>Subtitle</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+        </div>
+        <div fxLayout='column' fxFlex="90" fxLayoutGap="15px">
 
-    <!-- <form #templateVariableName="ngForm" (ngSubmit)="functionName">
-        <button type="submit">Submit</button>
-        
-    </form> -->
+            <mat-card style="padding:0px;">
+                <mat-tab-group>
+                    <mat-tab label="One">
 
-    <!-- <mat-tab-group>
-        <mat-tab label="Tab 1">Content 1</mat-tab>
-        <mat-tab label="Tab 2">Content 2</mat-tab>
-    </mat-tab-group> -->
+                        <div fxLayout="row" fxLayoutGap="15px" style="padding:15px;">
+
+                            <div>
+                                <h3>Settings</h3>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex quos illo autem perspiciatis
+                                    similique hic porro, maxime aut fugit. Molestias expedita ducimus corporis vero veniam
+                                    sed, maiores architecto repellendus mollitia?
+                                </p>
+                            </div>
+                        </div>
+
+                    </mat-tab>
+                    <mat-tab label="Two">
+
+                        <div fxLayout="row" fxLayoutGap="15px" style="padding:15px;">
+                            
+                            <div fxFlex="50">
+                                <img style="width:100%;height:auto;" src="http://lorempicsum.com/simpsons/350/200/1" alt="">
+                            </div>
+                            
+                            <div fxFlex>
+                                <h3>Lorem Ipsum</h3>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas cum, placeat animi nobis deleniti inventore. Amet, expedita ex quidem autem, vero molestiae ullam vel odio cumque possimus quaerat porro aspernatur?</p>
+                            </div>
+                        </div>
+
+
+
+                    </mat-tab>
+                </mat-tab-group>
+            </mat-card>
+            <mat-card>
+                <h3>Simple card</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex quos illo autem perspiciatis similique hic porro,
+                    maxime aut fugit. Molestias expedita ducimus corporis vero veniam sed, maiores architecto repellendus
+                    mollitia?
+                </p>
+            </mat-card>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- <div fxLayout="row wrap" fxLayoutAlign="space-around center">
+        <mat-card>Simple card</mat-card>
+    </div> -->
 
     <!-- <seed-card title="Angular Docs" description="Learn about the latest updates to the Angular framework." linkText="View Angular Docs"
         (click)="viewAngular()"></seed-card>

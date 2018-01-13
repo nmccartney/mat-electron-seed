@@ -21,7 +21,7 @@ export class GettingStartedComponent {
         this.electron.listener$.subscribe(message => {
             if (message === 'pong') {
                 this.electron.shell.beep();
-                this.router.navigate(['/getting-started']);
+                this.router.navigate(['/welcome']);
             }
         });
     }

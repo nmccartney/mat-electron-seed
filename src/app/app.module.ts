@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
 // electron
 import { NgxElectronModule } from './ngx-electron/ngx-electron.module';
 // app
@@ -10,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { WelcomeModule } from './welcome/welcome.module';
 import { AppComponent } from './app.component';
 import { MyMaterialModule } from './app-material.module';
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -17,10 +19,11 @@ import { MyMaterialModule } from './app-material.module';
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
-        MyMaterialModule,
         FormsModule,
+        FlexLayoutModule,
         HttpModule,
         AppRoutingModule,
+        MyMaterialModule,
         NgxElectronModule,
         WelcomeModule,
     ],

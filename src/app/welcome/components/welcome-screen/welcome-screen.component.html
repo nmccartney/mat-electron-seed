@@ -2,17 +2,23 @@
 <!-- <h1 class="hero-title">One framework. <br> Mobile & desktop.</h1> -->
 <!-- <a class="welcome-button" (click)="gettingStarted()">Get Started</a> -->
 
-<button mat-button mat-raised-button (click)="gettingStarted()">Click me!</button>
 
 <br>
 
+<h1>Welcome</h1>
 
 <form class="example-form">
     <mat-form-field class="example-full-width">
-        <input matInput placeholder="Favorite food" value="Sushi">
+        <input matInput placeholder="Username or Email" type="email">
     </mat-form-field>
 
+    <br>
+
     <mat-form-field class="example-full-width">
-        <textarea matInput placeholder="Leave a comment"></textarea>
+        <input matInput placeholder="Password" type="password">
     </mat-form-field>
+
+    <p>
+        <button mat-button mat-raised-button color="primary" (click)="gettingStarted()">Login</button>
+    </p>
 </form>
